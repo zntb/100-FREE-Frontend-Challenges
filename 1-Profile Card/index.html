@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Our unique tag to identify the solution -->
+  <bds />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>BigDevSoon Profile Card Challenge</title>
+
+  <!-- TailwindCSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="bg-[#f0f3c0] flex flex-col items-center justify-center min-h-screen"> 
+  <div class="overflow-hidden bg-white text-gray-800 space-y-4 shadow rounded-3xl max-w-md md:max-w-lg relative mx-1 md:m-0">
+
+    <!-- SVG Wave -->
+    <div class="wave">
+      <svg viewBox="0 0 500 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+        <path d="M0 154L25 153C50 152 100 150 150 164C200 178 250 208 300 201.2C350 194.3 400 150.7 450 149C500 147.3 550 187.7 600 195.7C650 203.7 700 179.3 750 157.5C800 135.7 850 116.3 875 106.7L900 97L900 0L875 0C850 0 800 0 750 0C700 0 650 0 600 0C550 0 500 0 450 0C400 0 350 0 300 0C250 0 200 0 150 0C100 0 50 0 25 0L0 0Z" fill="#e03f8c"></path>
+        <path d="M0 141L25 141.3C50 141.7 100 142.3 150 151C200 159.7 250 176.3 300 165.8C350 155.3 400 117.7 450 119.3C500 121 550 162 600 173C650 184 700 165 750 140.3C800 115.7 850 85.3 875 70.2L900 55L900 0L875 0C850 0 800 0 750 0C700 0 650 0 600 0C550 0 500 0 450 0C400 0 350 0 300 0C250 0 200 0 150 0C100 0 50 0 25 0L0 0Z" fill="#bc386b"></path>
+        <path d="M0 84L25 92.2C50 100.3 100 116.7 150 119C200 121.3 250 109.7 300 98.3C350 87 400 76 450 81.5C500 87 550 109 600 106.8C650 104.7 700 78.3 750 75.8C800 73.3 850 94.7 875 105.3L900 116L900 0L875 0C850 0 800 0 750 0C700 0 650 0 600 0C550 0 500 0 450 0C400 0 350 0 300 0C250 0 200 0 150 0C100 0 50 0 25 0L0 0Z" fill="#983250"></path>
+      </svg>
+    </div>
+
+    <!-- Header -->
+    <div class="flex flex-col items-center justify-center relative top-2 pb-14">
+      <img class="w-32 h-32 rounded-full object-cover shadow-md" src="https://images.unsplash.com/photo-1611701710755-3cb5920c6cfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxzZWFyY2h8NHx8dGV4dGluZyUyMGluJTIwYmVkfHwwfHx8fDE2MTY3NzMwMjY&ixlib=rb-1.2.1&q=80&w=1080" alt="Avatar">
+    </div>
+
+    <!-- Body -->
+    <div class="space-y-4 text-center pt-20 pb-8">
+      <h1 class="text-3xl font-semibold tracking-widest">Johnny Rogers</h1>
+      <span class="text-gray-500">@jonnyrogers</span>
+      <div class="flex items-center justify-center space-x-6 pt-4">
+        <a href="https://www.facebook.com/jonnyrogers" target="_blank" rel="noopener noreferrer">
+          <img class="w-8 h-8" src="https://img.icons8.com/?size=100&id=118467&format=png&color=000000" alt="Facebook">
+        </a>
+        <a href="https://www.linkedin.com/in/jonnyrogers/" target="_blank" rel="noopener noreferrer">
+          <img class="w-8 h-8" src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000" alt="Linkedin">
+        </a>
+        <a href="https://x.com/jonnyrogers" target="_blank" rel="noopener noreferrer">
+          <img class="w-8 h-8" src="https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=000000" alt="X-com"> 
+        </a>
+        <a href="https://instagram.com/jonnyrogers" target="_blank" rel="noopener noreferrer">
+          <img class="w-8 h-8" src="https://img.icons8.com/?size=100&id=M486asakOqWV&format=png&color=000000" alt="Instagram">
+        </a>
+        <a href="https://johnyrogers.com/" target="_blank" rel="noopener noreferrer">
+          <img class="w-8 h-8" src="https://img.icons8.com/?size=100&id=89777&format=png&color=000000" alt="Website">
+        </a>
+      </div>
+      <div class="mx-10 py-5">
+        <p class="font-semibold text-gray-600 px-7">Crafting band and communication strategies, creating visual designs, leading art direction, and capturing portraits through photography.</p>
+      </div>
+      <div class="flex items-center justify-center space-x-8 px-20 pt-5">
+        <button class="bg-[#e03f8c] hover:bg-[#c6397b] text-white flex-1 font-bold py-3 px-4 rounded-full">Follow</button>
+        <button class="bg-white hover:bg-slate-100 text-gray-500 hover:text-gray-700 flex-1 border border-gray-400 font-semibold py-3 px-4 rounded-full">Message</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
