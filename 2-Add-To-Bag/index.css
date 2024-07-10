@@ -1,0 +1,13 @@
+body {
+  font-family: 'Merriweather', serif;
+}
+
+.right-side {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .right-side {
+    width: 560px;
+  }
+}

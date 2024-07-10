@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Our unique tag to identify the solution -->
+    <bds />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
+    <title>BigDevSoon Add To Bag challenge</title>
+
+    <!-- TailwindCSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body class="bg-white flex flex-col items-center justify-center min-h-screen">
+    <div class="flex flex-col lg:flex-row gap-8 bg-white text-gray-800 p-8 max-w-4xl w-full md:min-w-fit">
+      <!-- Left -->
+      <div class="flex gap-4">
+        <!-- Mini Images -->
+        <div class="flex flex-col gap-4">
+          <div class="w-20 h-24 border-[3px] overflow-hidden rounded-md border-sky-600">
+            <img
+              class="object-cover w-full h-full"
+              src="https://i.ibb.co/Mh3FMNq/product2024-07-09-184853.png"
+              alt="Product mini image"
+            />
+          </div>
+          <div class="w-20 h-24 border-2 overflow-hidden rounded-md opacity-75 border-none">
+            <img
+              class="object-cover w-full h-full"
+              src="https://i.ibb.co/Mh3FMNq/product2024-07-09-184853.png"
+              alt="Product mini image"
+            />
+          </div>
+          <div class="w-20 h-24 border-2 overflow-hidden rounded-md opacity-75 border-none">
+            <img
+              class="object-cover w-full h-full"
+              src="https://i.ibb.co/Mh3FMNq/product2024-07-09-184853.png"
+              alt="Product mini image"
+            />
+          </div>
+        </div>
+
+        <!-- Product Image -->
+        <div class="flex-1 flex items-center justify-center w-[430px] h-[550px]">
+          <img
+            class="rounded-lg object-cover w-[480px] h-[560px]"
+            src="https://i.ibb.co/Mh3FMNq/product2024-07-09-184853.png"
+            alt="Product"
+          />
+        </div>
+      </div>
+      <!-- Right -->
+      <div class="right-side flex flex-col items-start justify-center p-3 space-y-6 min-h-full md:w-[550px]">
+        <span class="text-sm font-semibold text-[#5196e7]">POLO RALPH</span>
+        <h1 class="text-5xl leading-tight font-bold">Custom Fit Polo Bear Oxford Shirt</h1>
+        <p class="text-gray-400 font-semibold">Blue polo with a classic cut. Made of smooth and soft cotton.</p>
+        <div class="flex flex-col space-y-1 font-semibold">
+          <div class="flex items-center space-x-2">
+            <h2 class="text-3xl">$99.00</h2>
+            <span class="text-md mt-1 text-[#156cda] px-1 py-0.5 rounded-md bg-[#b0cbf9]">-25%</span>
+          </div>
+          <span class="pt-1 line-through text-gray-400">$132.00</span>
+        </div>
+        <div>
+          <h3 class="text-md font-bold uppercase mb-3">Choose size</h3>
+          <div class="flex space-x-4 font-semibold md:mb-5 mb-16">
+            <p class="py-2 px-4 cursor-pointer">S</p>
+            <p class="py-2 px-4 cursor-pointer bg-black text-white">M</p>
+            <p class="py-2 px-4 cursor-pointer">L</p>
+            <p class="py-2 px-4 cursor-pointer">XL</p>
+            <p class="py-2 px-4 cursor-pointer">XXL</p>
+          </div>
+        </div>
+
+        <button class="bg-[#1a76ff] hover:bg-[#1a76ff]/90 text-white w-full font-bold py-3 px-4 rounded-md">
+          ADD TO BAG
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
