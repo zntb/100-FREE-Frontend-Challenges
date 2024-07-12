@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Our unique tag to identify the solution -->
+    <bds />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>BigDevSoon Contact Us challenge</title>
+
+    <!-- TailwindCSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js "></script>
+  </head>
+
+  <body
+    class="background-gradient w-full min-h-screen flex items-center justify-center"
+  >
+    <div class="relative mb-0">
+      <img
+        class="scale-0.1 top-[-150px] absolute lg:top-[-65px] lg:left-[-310px] lg:scale-[0.5]
+          filter blur-[2px]"
+        src="https://svgshare.com/i/1886.svg"
+        alt="abstract"
+      />
+    </div>
+    <div class="w-full p-1">
+      <div class="flex flex-col lg:flex-row gap-32">
+        <div class="tooltip-container flex-1 max-w-xl">
+          <h1 class="text-6xl text-white font-semibold tracking-wide mb-4">
+            Contact Us
+          </h1>
+          <p class="mb-6 text-2xl text-gray-200">
+            Get in touch with us! Whether you have questions, feedback, or just
+            want to say hello, we're here for you.
+          </p>
+          <div class="tooltip text-lg mt-20 max-w-[410px]">
+            <h2 class="font-bold">Windler, Lockman and McClure</h2>
+            <p class="tooltip-text text-indigo-200">
+              3629 N Cole Rd, Boise, Illinois
+            </p>
+            <div class="absolute mt-[10px] ml-[137px] md:ml-[139px]">
+              <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter
+                    id="blur1"
+                    x="-50%"
+                    y="-50%"
+                    width="200%"
+                    height="200%"
+                  >
+                    <feGaussianBlur stdDeviation="2" />
+                  </filter>
+                  <filter
+                    id="blur2"
+                    x="-50%"
+                    y="-50%"
+                    width="200%"
+                    height="200%"
+                  >
+                    <feGaussianBlur stdDeviation="1.2" />
+                  </filter>
+                  <filter
+                    id="blur3"
+                    x="-50%"
+                    y="-50%"
+                    width="200%"
+                    height="200%"
+                  >
+                    <feGaussianBlur stdDeviation="1" />
+                  </filter>
+                </defs>
+                <circle r="6" cx="50" cy="50" fill="#f80179" fill-opacity="1" />
+                <circle
+                  r="13.5"
+                  cx="50"
+                  cy="50"
+                  fill="#f80179"
+                  fill-opacity="0.5"
+                  filter="url(#blur2)"
+                />
+                <circle
+                  r="21.1"
+                  cx="50"
+                  cy="50"
+                  fill="#f80179"
+                  fill-opacity="0.3"
+                  filter="url(#blur1)"
+                />
+                <circle
+                  r="6.5"
+                  cx="50"
+                  cy="50"
+                  fill="#f80179"
+                  fill-opacity="1"
+                  filter="url(#blur3)"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-3xl flex-1 max-w-[480px] shadow-md p-8">
+          <form>
+            <h2 class="text-xl font-semibold mb-5">Send us a message</h2>
+            <div class="mb-4">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                class="mt-1 p-2 w-full border rounded-2xl transition-all duration-300
+                  focus:outline-none focus:ring-2 focus:ring-[#482dda] focus:border-transparent"
+                required
+              />
+            </div>
+            <div class="mb-4">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                class="mt-1 p-2 w-full border rounded-2xl transition-all duration-300
+                  focus:outline-none focus:ring-2 focus:ring-[#482dda] focus:border-transparent"
+                required
+              />
+            </div>
+            <div class="mb-5">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Phone"
+                class="mt-1 p-2 w-full border rounded-2xl transition-all duration-300
+                  focus:outline-none focus:ring-2 focus:ring-[#482dda] focus:border-transparent"
+              />
+            </div>
+            <div class="mb-4">
+              <span class="block text-gray-700 tracking-wide mb-3">
+                Preferred contact method of communication
+              </span>
+              <div class="form mt-1">
+                <label class="inline-flex items-center">
+                  <input
+                    id="email"
+                    type="radio"
+                    name="contact_method"
+                    value="email"
+                    class="form-radio text-[#482dda]"
+                  />
+                  <span class="ml-2">Email</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                  <input
+                    id="phone"
+                    type="radio"
+                    name="contact_method"
+                    value="phone"
+                    class="form-radio text-[#482dda]"
+                    checked
+                  />
+                  <span class="ml-2">Phone</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-[70px]">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Message"
+                rows="4"
+                class="mt-1 p-2 w-full border rounded-md transition-all duration-300 focus:outline-none
+                  focus:ring-2 focus:ring-[#482dda] focus:border-transparent"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-[#fe007a] hover:bg-[#f54c9efb] text-white text-xl py-3 rounded-3xl
+                transition-all duration-300"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
