@@ -29,7 +29,7 @@ function groupAnagrams(strs) {
   const map = new Map();
 
   for (let str of strs) {
-    const sortedStr = str.split('').sort().join('');
+    const sortedStr = str.split("").sort().join("");
 
     if (!map.has(sortedStr)) {
       map.set(sortedStr, []);
@@ -41,7 +41,7 @@ function groupAnagrams(strs) {
   return Array.from(map.values());
 }
 
-// - Merge Sorted Lists
+// 3 - Merge Sorted Lists
 // Write a function mergeSortedLists that takes two sorted linked lists and merges them into one sorted list.
 function mergeSortedLists(l1, l2) {
   let merged = [];
@@ -71,7 +71,7 @@ function mergeSortedLists(l1, l2) {
   return merged;
 }
 
-// 3 - Three Sum
+// 4 - Three Sum
 // Write a function threeSum that takes an array of integers and returns all unique
 // triplets that sum up to zero.
 function threeSum(nums) {
@@ -113,7 +113,7 @@ function threeSum(nums) {
   return result;
 }
 
-// 4 - Product of Array Except Self
+// 5 - Product of Array Except Self
 // Write a function productExceptSelf that takes an array of integers and returns
 // an array such that each element at index i is the product of all the numbers
 // in the original array except the one at i.
@@ -140,7 +140,7 @@ function productExceptSelf(nums) {
   return result;
 }
 
-// 5 - Maximum Subarray
+// 6 - Maximum Subarray
 // Write a function maxSubArray that takes an array of integers and returns
 // the contiguous subarray (containing at least one number) which has the largest sum.
 function maxSubArray(nums) {
@@ -159,26 +159,15 @@ function maxSubArray(nums) {
   return maxSum;
 }
 
-// 6 - First Missing Positive
+// 7 - First Missing Positive
 // Write a function firstMissingPositive that takes an array of integers and finds
 // the smallest missing positive integer.
 function firstMissingPositive(nums) {
-  if (!nums || nums.length === 0) {
-    return 1;
-  }
-
   const n = nums.length;
 
   for (let i = 0; i < n; i++) {
-    if (nums[i] <= 0) {
-      continue;
-    }
-    while (nums[i] !== i + 1) {
-      const num = Math.abs(nums[nums[i] - 1]);
-      if (num === nums[i]) {
-        break;
-      }
-      [nums[i], nums[num - 1]] = [num, nums[i]];
+    while (nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] !== nums[i]) {
+      [nums[nums[i] - 1], nums[i]] = [nums[i], nums[nums[i] - 1]];
     }
   }
 
@@ -189,4 +178,102 @@ function firstMissingPositive(nums) {
   }
 
   return n + 1;
+}
+
+// 8 - Container With Most Water
+// Write a function maxArea that takes an array of integers where
+// each element represents the height of a vertical line, and
+// returns the maximum area of water it can contain.
+function maxArea(height) {
+  let left = 0;
+  let right = height.length - 1;
+  let maxArea = 0;
+
+  while (left < right) {
+    const currentArea = Math.min(height[left], height[right]) * (right - left);
+
+    if (currentArea > maxArea) {
+      maxArea = currentArea;
+    }
+
+    if (height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
+    }
+  }
+
+  return maxArea;
+}
+
+// 9 - Best Time to Buy and Sell Stock
+// Write a function maxProfit that takes an array where the i-th element
+// is the price of a given stock on day i, and returns the maximum
+// profit you can achieve by buying and selling one share of the stock.
+function maxProfit(prices) {
+  let minPrice = Infinity;
+  let maxProfit = 0;
+
+  for (let i = 0; i < prices.length; i++) {
+    if (prices[i] < minPrice) {
+      minPrice = prices[i];
+    }
+
+    const currentProfit = prices[i] - minPrice;
+
+    if (currentProfit > maxProfit) {
+      maxProfit = currentProfit;
+    }
+  }
+
+  return maxProfit;
+}
+
+// 10 - Longest Consecutive Sequence
+// Write a function longestConsecutive that takes an array of integers
+// and returns the length of the longest consecutive elements sequence.
+function longestConsecutive(nums) {
+  if (nums.length === 0) {
+    return 0;
+  }
+
+  let numSet = new Set(nums);
+  let longestStreak = 0;
+
+  for (let num of numSet) {
+    if (!numSet.has(num - 1)) {
+      let currentNum = num;
+      let currentStreak = 1;
+
+      while (numSet.has(currentNum + 1)) {
+        currentNum++;
+        currentStreak++;
+      }
+
+      longestStreak = Math.max(longestStreak, currentStreak);
+    }
+  }
+
+  return longestStreak;
+}
+
+// 11 - Find Peak Element
+// Write a function findPeakElement that takes an array of integers and
+// finds a peak element, and returns its index. A peak element is an
+// element that is greater than its neighbors.
+function findPeakElement(nums) {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left < right) {
+    let mid = left + Math.floor((right - left) / 2);
+
+    if (nums[mid] > nums[mid + 1]) {
+      right = mid;
+    } else {
+      left = mid + 1;
+    }
+  }
+
+  return left;
 }
