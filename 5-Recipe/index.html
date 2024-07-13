@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Our unique tag to identify the solution -->
+    <bds />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>BigDevSoon Recipe challenge</title>
+
+    <!-- TailwindCSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body class="w-full min-h-screen flex items-center justify-center">
+    <div class="flex flex-col md:flex-row gap-1">
+      <!-- Left side -->
+      <div
+        class="relative md:min-h-screen max-w-[550px] p-1 md:p-0 flex items-center
+          justify-center"
+      >
+        <div
+          class="absolute top-0 md:top-20 left-0 z-10 md:translate-x-[60%] lg:ranslate-x-[70%] md:ml-10 p-5 bg-white"
+        >
+          <div class="flex flex-col max-w-[500px] items-start pl-3">
+            <!-- Rating -->
+            <div class="flex items-center mb-1">
+                <fieldset class="rating text-sm">
+                    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5"></label>
+                    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half"></label>
+                    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4"></label>
+                    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half"></label>
+                    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3"></label>
+                    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half"></label>
+                    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2"></label>
+                    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half"></label>
+                    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1"></label>
+                    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf"></label>
+                </fieldset>
+              <span class="text-gray-600 text-xs font-semibold pl-1">(189)</span>
+            </div>
+            <h1 class="text-2xl lg:text-3xl xl:text-4xl font-extrabold">
+              Sweet iced Coffee with Coconut Milk
+            </h1>
+          </div>
+        </div>
+        <img
+          class="h-full w-auto max-w-full object-cover"
+          src="https://images.unsplash.com/photo-1588413335672-87b35888b55d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          alt="Sweet Iced Coffee with Coconut Milk"
+        />
+        <div
+          class="absolute left-0 m-1 md:m-0 top-[84%] md:top-[89%] bg-black text-gray-200
+            font-bold uppercase shadow-md shadow-gray-500"
+        >
+          <p class="p-3 text-md lg:text-xl lg:max-w-80 max-w-52 md:max-w-56 tracking-wide">
+            Sweet iced coffee with coconut milk
+          </p>
+        </div>
+      </div>
+
+      <!-- Right side -->
+      <div class="md:mt-60 ml-5 p-5 md:max-w-[630px]">
+        <div class="mb-4 flex gap-4">
+          <div class="flex items-center mb-1">
+            <img
+              class="w-6 h-6"
+              src="https://img.icons8.com/?size=100&id=19100&format=png&color=000000"
+              alt=""
+            />
+            <div class="flex flex-col ml-2">
+              <p class="text-gray-700n text-xs font-semibold uppercase">
+                Total Time
+              </p>
+              <p class="text-yellow-500 text-sm font-bold">10 minutes</p>
+            </div>
+          </div>
+          <div class="flex items-center mb-1 ml-1">
+            <img
+              class="w-6 h-6"
+              src="https://img.icons8.com/?size=100&id=48960&format=png&color=000000"
+              alt=""
+            />
+            <div class="flex flex-col ml-2">
+              <p class="text-gray-700n text-xs font-semibold uppercase">
+                Level
+              </p>
+              <p class="text-yellow-500 text-sm font-bold">Easy</p>
+            </div>
+          </div>
+          <div class="flex items-center mb-1 ml-1">
+            <img
+              class="w-6 h-6"
+              src="https://img.icons8.com/?size=100&id=209&format=png&color=000000"
+              alt=""
+            />
+            <div class="flex flex-col ml-2">
+              <p class="text-gray-700n text-xs font-semibold uppercase">
+                Budget
+              </p>
+              <p class="text-yellow-500 text-sm font-bold">Under $2</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 font-semibold italic mb-4 leading-7">
+          Sweet iced Coffee with coconut milk is easy to make and stores well in
+          the fridge. Make a large batch and save yourself a few trips to the
+          coffee shop.
+        </p>
+        <h2 class="text-lg tracking-wide font-bold mb-3 uppercase">
+          Ingredients
+        </h2>
+        <ul class="list-none mb-6 pl-1">
+          <li class="flex items-center mb-3">
+            <input type="checkbox" checked class="form-checkbox" />
+            <span class="ml-2 text-sm"
+              >3 tablespoon Espresso coffee powder</span
+            >
+          </li>
+          <li class="flex items-center mb-3">
+            <input type="checkbox" class="form-checkbox" />
+            <span class="ml-2 text-sm">1 cup off the boil water</span>
+          </li>
+          <li class="flex items-center mb-3">
+            <input type="checkbox" class="form-checkbox" />
+            <span class="ml-2 text-sm">1 cup Coconut milk</span>
+          </li>
+          <li class="flex items-center">
+            <input type="checkbox" class="form-checkbox" />
+            <span class="ml-2 text-sm"
+              >3 tablespoon Espresso coffee powder</span
+            >
+          </li>
+        </ul>
+        <h2 class="text-lg tracking-wide font-bold mb-2 uppercase">
+          Instructions
+        </h2>
+        <ol class="list-decimal pl-6 mb-4">
+          <li class="p-1">
+            <p class="leading-5">
+              Boil some water and let sit for 1-2 minutes.
+            </p>
+          </li>
+          <li class="p-1">
+            <p class="leading-5">
+              Put the coffee grounds into a cafetière and pour in the water.
+            </p>
+          </li>
+          <li class="p-1">
+            <p class="leading-5">
+              Let the coffee steep for 5 minutes then slowly press down the
+              plunger on your Cafetière.
+            </p>
+          </li>
+          <li class="p-1">
+            <p class="leading-5">
+              Pour the coffee into a jug, allow to cool then chill for several
+              hours.
+            </p>
+          </li>
+          <li class="p-1">
+            <p class="leading-5">
+              Whisk in the coconut milk and condensed milk and serve over plenty
+              of ice.
+            </p>
+          </li>
+          <li class="p-1">
+            <p class="leading-5">
+              This coffee can be stored in the fridge for up to 5 days. Shake or
+              stir again before serving.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
