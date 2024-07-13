@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Our unique tag to identify the solution -->
+    <bds />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BigDevSoon Image Carousel challenge</title>
+
+    <!-- TailwindCSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body class="bg-gray-900 text-white min-h-fit">
+    <div class="w-full h-[760px] mx-auto my-16 p-4">
+      <div class="relative">
+        <div class="relative flex items-center min-w-screen justify-center m-3">
+          <!-- Previous button -->
+          <button
+            id="prev"
+            class="bg-gray-700 bg-opacity-50 mr-5 p-2 rounded-full focus:outline-none z-10"
+          >
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Main image -->
+          <div
+            class="relative w-full max-w-5xl h-64 md:h-[450px] overflow-hidden flex items-center
+              justify-center carousel-container"
+          >
+            <div class="carousel">
+              <!-- Images  -->
+            </div>
+          </div>
+
+          <!-- Next button -->
+          <button
+            id="next"
+            class="bg-gray-700 bg-opacity-50 p-2 ml-5 rounded-full focus:outline-none z-10"
+          >
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Thumbnails -->
+        <div
+          class="thumbnails flex justify-center max-w-full items-center space-x-4 overflow-x-auto
+            mt-20"
+        >
+          <!-- Images  -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
