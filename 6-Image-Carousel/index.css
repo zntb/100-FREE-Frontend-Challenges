@@ -1,0 +1,34 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+  min-width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.active {
+  border: 2px solid #fff;
+}
+
+.thumbnail {
+  object-fit: cover;
+  width: 224px;
+  height: 224px;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.thumbnail:first-of-type,
+.thumbnail:last-of-type {
+  width: 112px;
+}
