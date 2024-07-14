@@ -1,6 +1,8 @@
 # Resources
 
 [Icons](https://icons8.com/icons/set/globe-webpage)\
+[SVGs](https://www.svgrepo.com/svg/)
+[Gradient](https://www.fffuel.co/ffflux/)
 [Waves](https://app.haikei.app/)\
 [Tin Eye](https://tineye.com/)
 
