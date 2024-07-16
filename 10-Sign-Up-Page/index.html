@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Our unique tag to identify the solution -->
+    <bds />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BigDevSoon Sign Up Page challenge</title>
+
+    <!-- TailwindCSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+
+  <body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div
+      class="flex flex-col md:flex-row items-start justify-between lg:w-[1000px] gap-10"
+    >
+      <div class="bg-white p-6 rounded-2xl shadow-xl max-w-md w-full">
+        <h2 class="text-2xl font-bold text-center mb-4">Sign Up</h2>
+        <p class="text-[#3b3b3b] text-center text-lg font-semibold mb-4">
+          Join us now! Sign up to kick-start your journey.
+        </p>
+        <div id="initial-options" class="text-center">
+          <button
+            class="w-full bg-white border border-gray-300 rounded-lg py-2 mb-3 flex items-center
+              justify-center"
+          >
+            <img
+              src="https://www.svgrepo.com/show/355037/google.svg"
+              alt="Google"
+              class="w-6 h-6 mr-2"
+            />
+            Sign up with Google
+          </button>
+          <button
+            id="email-btn"
+            class="w-full bg-[#27334C] text-white rounded-lg py-3 mb-3 flex items-center
+              justify-center"
+          >
+            <svg
+              class="h-6 w-6 mr-2"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#ffffff"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M21 8L17.4392 9.97822C15.454 11.0811 14.4614 11.6326 13.4102 11.8488C12.4798 12.0401 11.5202 12.0401 10.5898 11.8488C9.53864 11.6326 8.54603 11.0811 6.5608 9.97822L3 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+            Sign up with Email
+          </button>
+          <p>
+            Already have an account?
+            <a href="#" class="text-blue-600 font-bold">Log In</a>
+          </p>
+        </div>
+      </div>
+      <div
+        id="email-form"
+        class="hidden bg-white p-6 rounded-2xl shadow-xl max-w-md w-full"
+      >
+        <h2 class="text-2xl font-bold text-center mb-4">Sign Up</h2>
+        <p class="text-[#3b3b3b] text-center font-semibold text-lg mb-4">
+          Join us now! Sign up to kick-start your journey.
+        </p>
+        <form>
+          <div class="inputGroup">
+            <input
+              id="name"
+              type="text"
+              class="shadow appearance-none"
+              autocomplete="off"
+              required=""
+            />
+            <label for="name">Name</label>
+          </div>
+          <div class="inputGroup">
+            <input
+              id="email"
+              type="email"
+              class="shadow appearance-none"
+              autocomplete="off"
+              required=""
+            />
+            <label for="name">Email</label>
+          </div>
+          <div class="inputGroup relative">
+            <input
+              id="password"
+              type="password"
+              class="shadow appearance-none"
+              autocomplete="off"
+              required=""
+            />
+            <label for="email">Password</label>
+            <button
+              id="eye-btn"
+              type="button"
+              class="absolute inset-y-0 right-0 flex items-center mb-2 pr-3"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="#949494"
+                version="1.1"
+                id="Ebene_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 64 64"
+                enable-background="new 0 0 64 64"
+                xml:space="preserve"
+                stroke="#949494"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path
+                      d="M32,15C11.169,15,0.769,30.242,0.336,30.891c-0.448,0.672-0.448,1.547,0,2.219C0.769,33.758,11.169,49,32,49 s31.231-15.242,31.664-15.891c0.448-0.672,0.448-1.547,0-2.219C63.231,30.242,52.831,15,32,15z M32,45 C16.493,45,7.234,35.322,4.512,31.996C7.225,28.663,16.436,19,32,19c15.507,0,24.766,9.678,27.488,13.004 C56.775,35.337,47.564,45,32,45z"
+                    ></path>
+                    <path
+                      d="M32,23c-4.963,0-9,4.038-9,9s4.037,9,9,9s9-4.038,9-9S36.963,23,32,23z M32,37c-2.757,0-5-2.243-5-5s2.243-5,5-5 s5,2.243,5,5S34.757,37,32,37z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-[#27334C] text-white rounded-lg py-3 my-3"
+          >
+            Sign up
+          </button>
+          <p class="text-center">
+            Already have an account?
+            <a href="#" class="text-blue-600 font-bold">Log In</a>
+          </p>
+          <div class="flex items-center justify-center gap-1 pt-4 pb-2">
+            <div class="flex-1 border-t border-gray-300 w-1/2"></div>
+            <p class="text-center px-1 pb-1">or</p>
+            <div class="flex-1 border-t border-gray-300 w-1/2"></div>
+          </div>
+
+          <button
+            id="google-btn"
+            class="w-full bg-white border border-gray-300 rounded-lg my-4 py-2 flex items-center
+              justify-center"
+          >
+            <img
+              src="https://www.svgrepo.com/show/355037/google.svg"
+              alt="Google"
+              class="w-6 h-6 mr-2"
+            />
+            Sign up with Google
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
