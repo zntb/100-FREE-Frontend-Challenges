@@ -8,3 +8,4 @@
 - [6-Image-Carousel](https://image-carousel-html-app.netlify.app/)
 - [7-Create-Account](https://create-account-html.netlify.app/)
 - [8-Music-Events](https://music-events-html.netlify.app/)
+- [9-Password-Generator](https://password-generator-html-app.netlify.app/)
