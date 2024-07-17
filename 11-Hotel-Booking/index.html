@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Our unique tag to identify the solution -->
+    <bds />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>BigDevSoon Hotel Booking challenge</title>
+
+    <!-- TailwindCSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body class="bg-[#e7b389] p-6 flex justify-center items-center min-h-screen">
+    <div
+      class="max-w-4xl 2xl:max-w-5xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden
+        p-8"
+    >
+      <div class="md:flex">
+        <div
+          class="md:w-1/2 2xl:w-[470px] flex flex-col justify-between gap-44 2xl:gap-60 2xl:mr-5"
+        >
+          <div class="space-y-5">
+            <div>
+              <label
+                for="checkin"
+                class="block text-lg font-semibold text-gray-700"
+                >Check In</label
+              >
+              <input
+                type="date"
+                id="checkin"
+                placeholder="Select Date.."
+                class="mt-1 block w-full bg-gray-200 rounded-md shadow-sm sm:text-sm p-3"
+              />
+              <a class="input-button" title="toggle" data-toggle>
+                <i class="icon-calendar"></i>
+              </a>
+
+              <a class="input-button" title="clear" data-clear>
+                <i class="icon-close"></i>
+              </a>
+            </div>
+            <div>
+              <label
+                for="checkout"
+                class="block text-lg font-semibold text-gray-700"
+                >Check Out</label
+              >
+              <input
+                type="date"
+                placeholder="Select Date.."
+                id="checkout"
+                class="mt-1 block w-full bg-gray-200 rounded-md shadow-sm sm:text-sm p-3"
+              />
+            </div>
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="custom-select-wrapper">
+                <label
+                  for="adults"
+                  class="block text-lg font-semibold text-gray-700"
+                  >Adults</label
+                >
+                <div class="custom-select" id="adults-select">
+                  <div class="select-selected">1</div>
+                  <div class="select-items select-hide">
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                  </div>
+                </div>
+              </div>
+              <div class="custom-select-wrapper">
+                <label
+                  for="children"
+                  class="block text-lg font-semibold text-gray-700"
+                  >Children</label
+                >
+                <div class="custom-select" id="children-select">
+                  <div class="select-selected">0</div>
+                  <div class="select-items select-hide">
+                    <div>0</div>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="w-full bg-[#ff8a00] hover:bg-[#ff8a00]/90 text-white font-bold py-3 px-4
+              rounded-3xl"
+          >
+            Book a room
+          </button>
+        </div>
+        <div
+          class="relative md:w-1/2 2xl:w-2/3 mt-6 md:mt-0 md:ml-4 lg:w-1/2 h-full"
+        >
+          <div class="rounded-md overflow-hidden lg:w-full">
+            <div class="absolute top-32 md:top-80 left-1 p-4">
+              <h2 class="text-lg font-semibold">Golden Apartments</h2>
+              <p class="text-gray-500">Punta Cana, Dominican Republic</p>
+            </div>
+            <img
+              class="md::w-[533px] md:h-[413px] object-cover"
+              src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Hotel Room"
+              class="w-full h-48 object-cover"
+            />
+          </div>
+
+          <div class="grid grid-cols-3 2xl:min-h-36 gap-4 mt-4">
+            <img
+              class="w-full h-full object-cover rounded-md"
+              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Hotel Image 1"
+              class="w-full h-24 object-cover rounded-md"
+            />
+            <img
+              class="w-full h-full object-cover rounded-md"
+              src="https://images.unsplash.com/photo-1455587734955-081b22074882?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Hotel Image 2"
+              class="w-full h-24 object-cover rounded-md"
+            />
+            <img
+              class="w-full h-full object-cover rounded-md"
+              src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=500&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fGhvdGVsfGVufDB8fDB8fHww"
+              alt="Hotel Image 3"
+              class="w-full h-24 object-cover rounded-md"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
