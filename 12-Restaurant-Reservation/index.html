@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Our unique tag to identify the solution -->
+  <bds />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BigDevSoon Restaurant Reservation challenge</title>
+
+  <!-- TailwindCSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-neutral-200 flex justify-center items-center min-h-screen">
+    <div class="bg-white flex flex-col justify-between rounded-2xl overflow-hidden shadow-lg max-w-sm h-[680px] w-full">
+        <img class="w-" src="https://images.squarespace-cdn.com/content/v1/56323f6fe4b03a88e3979b64/1490216889108-5N6013EACAMF70HE7E13/ke17ZwdGBToddI8pDm48kPqQfq0L3n3wpHIsRapTfg8UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcpZFgonhpUjQuR9UY_f4FRv01MfGGW-Q2SKIZAaCvwbmMH1mhS07BCLTJvtZLtrKj/Dining+with+center+gradient.png" alt="Restaurant Image" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="p-4">
+            <h2 class="text-xl font-bold">Gramercy Tavern</h2>
+            <p class="text-gray-500">20th St New York</p>
+            <div class="flex items-center my-2">
+                <div class="flex items-center text-[#ff851b] gap-1">
+                    <!-- Five star icons here -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.518 4.674a1 1 0 00.95.69h4.916c.969 0 1.372 1.24.588 1.81l-3.977 2.89a1 1 0 00-.364 1.118l1.518 4.674c.3.921-.755 1.688-1.54 1.118l-3.977-2.89a1 1 0 00-1.175 0l-3.977 2.89c-.784.57-1.838-.197-1.54-1.118l1.518-4.674a1 1 0 00-.364-1.118l-3.977-2.89c-.784-.57-.381-1.81.588-1.81h4.916a1 1 0 00.95-.69l1.518-4.674z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.518 4.674a1 1 0 00.95.69h4.916c.969 0 1.372 1.24.588 1.81l-3.977 2.89a1 1 0 00-.364 1.118l1.518 4.674c.3.921-.755 1.688-1.54 1.118l-3.977-2.89a1 1 0 00-1.175 0l-3.977 2.89c-.784.57-1.838-.197-1.54-1.118l1.518-4.674a1 1 0 00-.364-1.118l-3.977-2.89c-.784-.57-.381-1.81.588-1.81h4.916a1 1 0 00.95-.69l1.518-4.674z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.518 4.674a1 1 0 00.95.69h4.916c.969 0 1.372 1.24.588 1.81l-3.977 2.89a1 1 0 00-.364 1.118l1.518 4.674c.3.921-.755 1.688-1.54 1.118l-3.977-2.89a1 1 0 00-1.175 0l-3.977 2.89c-.784.57-1.838-.197-1.54-1.118l1.518-4.674a1 1 0 00-.364-1.118l-3.977-2.89c-.784-.57-.381-1.81.588-1.81h4.916a1 1 0 00.95-.69l1.518-4.674z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.518 4.674a1 1 0 00.95.69h4.916c.969 0 1.372 1.24.588 1.81l-3.977 2.89a1 1 0 00-.364 1.118l1.518 4.674c.3.921-.755 1.688-1.54 1.118l-3.977-2.89a1 1 0 00-1.175 0l-3.977 2.89c-.784.57-1.838-.197-1.54-1.118l1.518-4.674a1 1 0 00-.364-1.118l-3.977-2.89c-.784-.57-.381-1.81.588-1.81h4.916a1 1 0 00.95-.69l1.518-4.674z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="#ffc790">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.518 4.674a1 1 0 00.95.69h4.916c.969 0 1.372 1.24.588 1.81l-3.977 2.89a1 1 0 00-.364 1.118l1.518 4.674c.3.921-.755 1.688-1.54 1.118l-3.977-2.89a1 1 0 00-1.175 0l-3.977 2.89c-.784.57-1.838-.197-1.54-1.118l1.518-4.674a1 1 0 00-.364-1.118l-3.977-2.89c-.784-.57-.381-1.81.588-1.81h4.916a1 1 0 00.95-.69l1.518-4.674z"/>
+                    </svg>
+                </div>
+                <p class="text-gray-700 ml-2">(231 reviews)</p>
+                <button class="ml-auto text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5.121 17.804A3.992 3.992 0 015 16H4a4 4 0 110-8h1a3.993 3.993 0 01.879-2.196m12.122 9.401A3.993 3.993 0 0119 16h1a4 4 0 100-8h-1a3.993 3.993 0 01-.879-2.196M8 12a4 4 0 108 0 4 4 0 00-8 0z" />
+                    </svg>
+                </button>
+            </div>
+            <p class="text-gray-700 text-sm mb-4">A quintessential New York City gem among the city’s iconic establishments,
+                Gramercy Tavern serves as an extraordinary destination for special occasions and an elevated version of an
+                everyday retreat. It's the unique kind of place you choose for a celebration after a joyful engagement, or
+                casually wander into to seek refuge from an unexpected downpour.</p>
+            
+        </div>
+        <button class="w-full m-0 rounded-b-2xl bg-black text-white py-2">Make a reservation</button>
+    </div>
+</body>
+
+</html>
