@@ -1,0 +1,24 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.heart .heart-icon {
+  user-select: none;
+  transform: translate(-20%, -50%);
+  fill: transparent;
+  transition: transform 0.25s ease-out;
+  transform-origin: 50% 50%;
+}
+.heart .heart-icon .fill-color-shape {
+  fill: transparent;
+}
+.heart .heart-icon.isLiked {
+  filter: drop-shadow(0 3px 5px #c44133);
+}
+.heart .heart-icon.isLiked .fill-color-shape {
+  transition: fill 0.5s linear;
+  fill: #e74c3c;
+}
+.heart .heart-icon:hover {
+  transform: translate(-20%, calc(-50% - 3px)) scale(1.03);
+}
