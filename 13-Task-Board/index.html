@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Our unique tag to identify the solution -->
+    <bds />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>BigDevSoon Task Board challenge</title>
+
+    <!-- TailwindCSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="bg-[#e5e8ee] flex items-center justify-center mx-auto min-h-screen"
+  >
+    <div class="container mx-auto p-4">
+      <h1 class="text-4xl font-bold mb-6">Boards</h1>
+      <div class="flex flex-wrap -mx-4">
+        <!-- To do column -->
+        <div class="w-full sm:w-1/2 lg:w-1/4 mb-4">
+          <div class="bg-transparent rounded-lg p-4">
+            <h2 class="text-xl font-bold mb-4">
+              To do <span class="text-gray-400">+</span>
+            </h2>
+            <div class="space-y-4">
+              <div class="bg-white p-4 rounded-lg shadow-xl">
+                <div class="flex justify-between font-semibold mb-3">
+                  <span
+                    class="text-sm bg-[#eb077d] text-white px-1 py-0.5 rounded-lg"
+                    >HIGH</span
+                  >
+                  <span class="text-xs text-gray-400 tracking-wide"
+                    >2/15/24</span
+                  >
+                </div>
+                <div
+                  class="flex items-center max-h-36 overflow-hidden rounded-xl my-4"
+                >
+                  <img
+                    class="object-center"
+                    src="https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?q=80&w=2022&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Task Image"
+                  />
+                </div>
+                <h3 class="2xl:text-xl font-bold pt-3 leading-4">
+                  Update Website Homepage
+                </h3>
+                <p class="text-gray-600 my-4">
+                  Revise the content and layout of the homepage to highlight new
+                  features and improve user engagement.
+                </p>
+                <div class="flex items-center mt-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="User Avatar"
+                    class="w-8 h-8 rounded-full object-cover"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="User Avatar"
+                    class="w-8 h-8 rounded-full object-cover -ml-3"
+                  />
+                  <div
+                    class="flex items-center justify-center w-8 h-8 text-sm border-dotted border-gray-300
+                      border-2 rounded-full -ml-3 cursor-pointer"
+                  >
+                    +
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- In progress column -->
+        <div class="w-full sm:w-1/2 lg:w-1/4 mb-4">
+          <div class="bg-transparent rounded-lg p-4">
+            <h2 class="text-xl font-bold mb-4">
+              In progress <span class="text-gray-400">+</span>
+            </h2>
+            <div class="space-y-5">
+              <div class="bg-white p-4 rounded-lg shadow-xl">
+                <div class="flex justify-between font-semibold mb-2">
+                  <span
+                    class="text-sm bg-[#4bb63f] text-white px-1 py-0.5 rounded-lg"
+                    >LOW</span
+                  >
+                  <span class="text-xs text-gray-400 tracking-wide"
+                    >2/13/24</span
+                  >
+                </div>
+                <h3 class="2xl:text-xl font-bold leading-4">
+                  Bug Fix - User Registration
+                </h3>
+                <p class="text-gray-600 my-4">
+                  Investigate and resolve the reported bug in the user
+                  registration process where some users are unable to sign up.
+                </p>
+                <div class="flex items-center mt-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="User Avatar"
+                    class="w-8 h-8 rounded-full object-cover"
+                  />
+                  <div
+                    class="flex items-center justify-center w-8 h-8 text-sm border-dotted border-gray-300
+                      border-2 rounded-full -ml-3 cursor-pointer"
+                  >
+                    +
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-xl">
+                <div class="flex justify-between font-semibold mb-2">
+                  <span
+                    class="text-sm text-white bg-[#2bb4ec] px-1 py-0.5 rounded-lg"
+                    >MEDIUM</span
+                  >
+                  <span class="text-xs text-gray-400 tracking-wide"
+                    >2/08/24</span
+                  >
+                </div>
+                <div
+                  class="flex items-center max-h-36 overflow-hidden rounded-xl my-4"
+                >
+                  <img
+                    class="object-center"
+                    src="https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Task Image"
+                  />
+                </div>
+                <h3 class="2xl:text-xl font-bold leading-4">
+                  Social Media Campaign
+                </h3>
+                <p class="text-gray-600 my-4">
+                  Plan and execute a social media campaign for the upcoming
+                  product launch in February, including creating posts and
+                  scheduling updates.
+                </p>
+                <div class="flex items-center mt-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="User Avatar"
+                    class="w-8 h-8 rounded-full object-cover"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1521252659862-eec69941b071?q=80&w=1872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="User Avatar"
+                    class="w-8 h-8 rounded-full object-cover -ml-3"
+                  />
+                  <div
+                    class="flex items-center justify-center w-8 h-8 text-sm border-dotted border-gray-300
+                      border-2 rounded-full -ml-3 cursor-pointer"
+                  >
+                    +
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Under Review column -->
+        <div class="w-full sm:w-1/2 lg:w-1/4 mb-4">
+          <div class="bg-transparent rounded-lg p-4">
+            <h2 class="text-xl font-bold mb-4">
+              Under Review <span class="text-gray-400">+</span>
+            </h2>
+            <div class="space-y-4">
+              <div class="bg-white p-4 rounded-lg shadow-xl">
+                <div class="flex justify-between font-semibold mb-2">
+                  <span
+                    class="text-sm bg-[#eb077d] text-white px-1 py-0.5 rounded-lg"
+                    >HIGH</span
+                  >
+                  <span class="text-xs text-gray-400 tracking-wide"
+                    >2/11/24</span
+                  >
+                </div>
+                <h3 class="2xl:text-xl font-bold leading-4">
+                  Mobile App Feature - Push Notifications
+                </h3>
+                <p class="text-gray-600 my-4">
+                  Implement push notification feature for the mobile app to
+                  enhance user engagement. Ensure compatibility with both iOS
+                  and Android platforms.
+                </p>
+                <div class="flex items-center mt-2">
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="User Avatar"
+                    class="w-8 h-8 rounded-full object-cover"
+                  />
+                  <div
+                    class="flex items-center justify-center w-8 h-8 text-sm border-dotted border-gray-300
+                      border-2 rounded-full -ml-3 cursor-pointer"
+                  >
+                    +
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Done column -->
+        <div class="w-full sm:w-1/2 lg:w-1/4 mb-4">
+          <div class="bg-transparent rounded-lg p-4">
+            <h2 class="text-xl font-bold mb-4">
+              Done <span class="text-gray-400">+</span>
+            </h2>
+            <div class="space-y-5">
+              <div class="bg-white p-4 rounded-lg shadow-xl">
+                <div class="flex justify-between font-semibold mb-2">
+                  <span
+                    class="text-sm bg-[#4bb63f] text-white px-1 py-0.5 rounded-lg"
+                    >LOW</span
+                  >
+                  <span class="text-xs text-gray-400 tracking-wide"
+                    >2/09/24</span
+                  >
+                </div>
+                <h3 class="2xl:text-xl font-bold leading-4">
+                  Content Creation - Blog Post
+                </h3>
+                <p class="text-gray-600 my-4">
+                  Write and publish a blog post about industry trends and their
+                  impact on our products/services. Include relevant visuals and
+                  SEO optimization.
+                </p>
+                <div class="flex items-center mt-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="User Avatar"
+                    class="w-8 h-8 rounded-full object-cover"
+                  />
+                  <div
+                    class="flex items-center justify-center w-8 h-8 text-sm border-dotted border-gray-300
+                      border-2 rounded-full -ml-3 cursor-pointer"
+                  >
+                    +
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-xl">
+                <div class="flex justify-between font-semibold mb-2">
+                  <span
+                    class="text-sm text-white bg-[#2bb4ec] px-1 py-0.5 rounded-lg"
+                    >MEDIUM</span
+                  >
+                  <span class="text-xs text-gray-400 tracking-wide"
+                    >2/07/24</span
+                  >
+                </div>
+                <div
+                  class="flex items-center max-h-36 overflow-hidden rounded-xl my-4"
+                >
+                  <img
+                    class="object-center"
+                    src="https://images.unsplash.com/photo-1517315003714-a071486bd9ea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Task Image"
+                  />
+                </div>
+                <h3 class="2xl:text-xl font-bold leading-4">
+                  IT Security Audit
+                </h3>
+                <p class="text-gray-600 my-4">
+                  Write and publish a blog post about industry trends and their
+                  impact on our products/services. Include relevant visuals and
+                  SEO optimization.
+                </p>
+                <div class="flex items-center mt-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="User Avatar"
+                    class="w-8 h-8 rounded-full object-cover"
+                  />
+                  <div
+                    class="flex items-center justify-center w-8 h-8 text-sm border-dotted border-gray-300
+                      border-2 rounded-full -ml-3 cursor-pointer"
+                  >
+                    +
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
