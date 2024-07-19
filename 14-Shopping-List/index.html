@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Our unique tag to identify the solution -->
+    <bds />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>BigDevSoon Shopping List challenge</title>
+
+    <!-- TailwindCSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+
+  <body
+    class="bg-[url('https://images.unsplash.com/photo-1614853035986-b230d7d5679c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]
+      flex justify-center items-center min-h-screen"
+  >
+    <div class="flex flex-col md:flex-row mx-auto p-3 md:gap-8">
+      <div
+        class="flex flex-col md:flex-row justify-between items-start md:items-center bg-white
+          p-6 rounded-xl shadow-xl"
+      >
+        <div class="min-w-[360px] lg:min-w-[470px] font-semibold">
+          <div class="flex items-center justify-between my-3">
+            <h2 class="text-2xl font-bold mb-4">Your product list</h2>
+            <span class="total-items text-lg mb-2">0 items</span>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-center space-x-4">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1661645518910-4b40fe03349c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Product"
+                class="w-24 h-24 rounded-lg object-cover"
+              />
+              <div class="flex-1">
+                <h3 class="text-sm xl:text-lg font-semibold pb-3">
+                  Illuminating face cream
+                </h3>
+                <div class="flex w-2/3 items-center pt-3">
+                  <button
+                    class="decrease-button bg-gray-200 text-gray-600 px-2.5 py-0.5 rounded
+                      hover:bg-gray-300 transition"
+                  >
+                    -
+                  </button>
+                  <span class="quantity mx-2">0</span>
+                  <button
+                    class="increase-button bg-gray-200 text-gray-600 px-2 py-0.5 rounded hover:bg-gray-300
+                      transition"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col h-full items-end">
+                <button
+                  class="reset-button text-2xl text-red-500 hover:text-red-700 transition pb-3"
+                >
+                  &times;
+                </button>
+                <span class="price text-lg font-semibold pt-3 fixed-width"
+                  >$0.00</span
+                >
+              </div>
+            </div>
+            <hr class="border-gray-200 w-2/3 mx-auto" />
+            <div class="flex items-center space-x-4">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1661645518910-4b40fe03349c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Product"
+                class="w-24 h-24 rounded-lg object-cover"
+              />
+              <div class="flex-1">
+                <h3 class="text-sm xl:text-lg font-semibold pb-3">
+                  Illuminating face cream
+                </h3>
+                <div class="flex items-center pt-3">
+                  <button
+                    class="decrease-button bg-gray-200 text-gray-600 px-2.5 py-0.5 rounded
+                      hover:bg-gray-300 transition"
+                  >
+                    -
+                  </button>
+                  <span class="quantity mx-2">0</span>
+                  <button
+                    class="increase-button bg-gray-200 text-gray-600 px-2 py-0.5 rounded hover:bg-gray-300
+                      transition"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col h-full items-end">
+                <button
+                  class="reset-button text-2xl text-red-500 hover:text-red-700 transition pb-3"
+                >
+                  &times;
+                </button>
+                <span class="price text-lg font-semibold pt-3 fixed-width"
+                  >$0.00</span
+                >
+              </div>
+            </div>
+            <hr class="border-gray-200 w-2/3 mx-auto" />
+            <div class="flex items-center space-x-4">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1661645518910-4b40fe03349c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Product"
+                class="w-24 h-24 rounded-lg object-cover"
+              />
+              <div class="flex-1">
+                <h3 class="text-sm xl:text-lg font-semibold pb-3">
+                  Intense lift up serum
+                </h3>
+                <div class="flex items-center pt-3">
+                  <button
+                    class="decrease-button bg-gray-200 text-gray-600 px-2.5 py-0.5 rounded
+                      hover:bg-gray-300 transition"
+                  >
+                    -
+                  </button>
+                  <span class="quantity mx-2">0</span>
+                  <button
+                    class="increase-button bg-gray-200 text-gray-600 px-2 py-0.5 rounded hover:bg-gray-300
+                      transition"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col h-full items-end">
+                <button
+                  class="reset-button text-2xl text-red-500 hover:text-red-700 transition pb-3"
+                >
+                  &times;
+                </button>
+                <span class="price text-lg font-semibold pt-3 fixed-width"
+                  >$0.00</span
+                >
+              </div>
+            </div>
+            <hr class="border-gray-200 w-2/3 mx-auto" />
+            <div class="flex items-center space-x-4">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1661645518910-4b40fe03349c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Product"
+                class="w-24 h-24 rounded-lg object-cover"
+              />
+              <div class="flex-1">
+                <h3 class="text-sm xl:text-lg font-semibold pb-3">
+                  CBD Premium Oil
+                </h3>
+                <div class="flex items-center pt-3">
+                  <button
+                    class="decrease-button bg-gray-200 text-gray-600 px-2.5 py-0.5 rounded
+                      hover:bg-gray-300 transition"
+                  >
+                    -
+                  </button>
+                  <span class="quantity mx-2">0</span>
+                  <button
+                    class="increase-button bg-gray-200 text-gray-600 px-2 py-0.5 rounded hover:bg-gray-300
+                      transition"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col h-full items-end">
+                <button
+                  class="reset-button text-2xl text-red-500 hover:text-red-700 transition pb-3"
+                >
+                  &times;
+                </button>
+                <span class="price text-lg font-semibold pt-3 fixed-width"
+                  >$0.00</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-[320px] lg:w-[340px] mt-6 md:mt-0">
+        <div class="bg-gray-100 p-6 rounded-xl shadow-xl">
+          <h2 class="text-2xl font-bold my-3">Order Summary</h2>
+          <div class="flex justify-between mt-6 mb-2">
+            <span class="text-lg">Subtotal</span>
+            <span class="subtotal text-lg">$0.00</span>
+          </div>
+          <div class="flex justify-between mb-2">
+            <span class="text-lg">Tax</span>
+            <span id="tax" class="text-lg">$0.00</span>
+          </div>
+          <div class="flex justify-between mb-4">
+            <span class="text-lg">Shipping</span>
+            <span id="shipping" class="text-lg">$0.00</span>
+          </div>
+          <hr class="border-gray-400 py-2 mx-auto" />
+          <div class="flex justify-between mb-4">
+            <span class="text-2xl font-bold">Total</span>
+            <span id="total" class="text-2xl font-bold">$0.00</span>
+          </div>
+          <button
+            id="pay-btn"
+            class="w-full bg-black hover:bg-black/90 transition text-white my-2 py-2 rounded-lg"
+          >
+            Pay now
+          </button>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-xl shadow-xl mt-4">
+          <h2 class="text-2xl font-bold mb-4">Promo Code</h2>
+          <input
+            id="promo-code"
+            type="text"
+            placeholder="Enter promo code"
+            class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none
+              focus:ring-2 focus:ring-[#313131] focus:border-transparent transition
+              duration-300"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.fixed-width {
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+}
