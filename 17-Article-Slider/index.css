@@ -1,0 +1,15 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+#dropdownMenu::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  z-index: 30;
+}
