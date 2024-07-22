@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Our unique tag to identify the solution -->
+    <bds />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap"
+        rel="stylesheet" />
+    <title>BigDevSoon Upload Images challenge</title>
+
+    <!-- TailwindCSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+</head>
+
+<body class="bg-blue-50 flex items-center justify-center min-h-screen">
+    <div class="mx-auto p-4 max-w-md">
+        <div class="bg-white min-w-[500px] p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-5">Upload Photo</h2>
+            <div class="file-upload rounded" id="file-upload">
+                <input type="file" id="file-input" multiple accept="image/png, image/jpeg, image/jpg" />
+                <img src="https://img.icons8.com/?size=100&id=cvyABcIxRgUf&format=png&color=000000"
+                    class="w-20 h-20 mx-auto mb-6" />
+                <p class="text-gray-500">
+                    Drop your image here or
+                    <span class="text-[#4706fd] cursor-pointer" id="browse">browse</span>
+                </p>
+                <p class="text-gray-400">PNG, JPG, JPEG</p>
+            </div>
+            <div id="file-list" class="mt-4"></div>
+        </div>
+    </div>
+
+    <div id="delete-modal-container"></div>
+</body>
+
+</html>
