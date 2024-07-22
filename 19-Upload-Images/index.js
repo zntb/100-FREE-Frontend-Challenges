@@ -11,15 +11,35 @@ document.addEventListener("DOMContentLoaded", () => {
   let fileToDelete = null;
   const MAX_FILES = 6;
 
-  fileUpload.addEventListener("click", () => fileInput.click());
-  browseButton.addEventListener("click", () =>
-    window.open("https://unsplash.com/", "_blank"),
-  );
+  browseButton.addEventListener("click", () => fileInput.click());
   fileInput.addEventListener("change", handleFiles);
+
+  fileUpload.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    fileUpload.classList.add("bg-gray-200");
+  });
+
+  fileUpload.addEventListener("dragleave", () => {
+    fileUpload.classList.remove("bg-gray-200");
+  });
+
+  fileUpload.addEventListener("drop", (e) => {
+    e.preventDefault();
+    fileUpload.classList.remove("bg-gray-200");
+    handleDrop(e.dataTransfer.files);
+  });
 
   function handleFiles() {
     const newFiles = [...fileInput.files];
+    addFiles(newFiles);
+  }
 
+  function handleDrop(droppedFiles) {
+    const newFiles = [...droppedFiles];
+    addFiles(newFiles);
+  }
+
+  function addFiles(newFiles) {
     if (files.length + newFiles.length > MAX_FILES) {
       alert(`You can only upload a maximum of ${MAX_FILES} pictures.`);
       return;
