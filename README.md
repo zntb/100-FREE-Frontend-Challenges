@@ -18,3 +18,4 @@
 - [16-Fur-Friends](https://zntb.github.io/100-FREE-Frontend-Challenges/16-Fur-Friends/)
 - [17--Article-Slider](https://zntb.github.io/100-FREE-Frontend-Challenges/17-Article-Slider/)
 - [18-Images-Preview](https://zntb.github.io/100-FREE-Frontend-Challenges/18-Images-Preview/)
+- [19-Upload-Images](https://zntb.github.io/100-FREE-Frontend-Challenges/19-Upload-Images/)
