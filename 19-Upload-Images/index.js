@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </button>
             </div>
             <p class="flex-1 text-xs text-gray-500">
-                ${(file.size / 1024 / 1024).toFixed(2)} MB
+                ${formatFileSize(file.size)}
             </p>
             <div class="flex justify-between items-center w-full bg-transparent rounded overflow-hidden">
                 <div class="progress-bar" style="width: 100%"></div>
@@ -132,3 +132,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+function formatFileSize(size) {
+  if (size < 1024) {
+    return `${size} B`;
+  } else if (size < 1024 * 1024) {
+    return `${(size / 1024).toFixed(2)} KB`;
+  } else {
+    return `${(size / (1024 * 1024)).toFixed(2)} MB`;
+  }
+}
