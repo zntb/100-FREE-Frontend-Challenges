@@ -20,8 +20,7 @@ const thumbnailsContainer = document.querySelector(".thumbnails");
 
 const createImageElement = (image, index) => {
   const imgElement = document.createElement("div");
-  imgElement.className =
-    "border border-gray-200 rounded-lg overflow-hidden cursor-pointer";
+  imgElement.className = "rounded-lg overflow-hidden cursor-pointer";
   imgElement.innerHTML = `<img src="${image}" alt="Image ${index + 1}" class="w-full h-48">`;
   imgElement.addEventListener("click", () => openModal(image));
   return imgElement;
