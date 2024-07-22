@@ -1,0 +1,21 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.file-upload {
+  border: 2px dashed #cbd5e1;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+.file-upload:hover {
+  border: 2px dashed #818cf8;
+}
+.file-upload input {
+  display: none;
+}
+.progress-bar {
+  background: #4706fd;
+  height: 0.5rem;
+}
