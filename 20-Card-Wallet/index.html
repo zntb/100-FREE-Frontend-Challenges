@@ -13,22 +13,22 @@
     <script src="index.js" defer></script>
   </head>
 
-  <body class="bg-gray-100">
+  <body class="bg-gray-200">
     <div
       id="card-section"
       class="min-h-screen flex flex-col items-center justify-center"
     >
       <!-- My Cards Section -->
       <div
-        class="bg-black w-full max-w-sm rounded-t-3xl shadow-md p-4 relative"
+        class="bg-black w-full max-w-sm rounded-3xl shadow-md p-4 relative"
       >
         <div class="mb-6">
-          <p class="text-sm text-white mb-4">Welcome</p>
+          <p class="text-sm text-gray-100 mb-4">Welcome</p>
           <h1 class="text-3xl text-white font-bold">My Cards</h1>
         </div>
         <div
           id="card-container"
-          class="relative card-bg rounded-xl text-white p-4 mb-4"
+          class="relative opacity-90 rounded-xl text-white p-4 mb-4"
         >
           <div class="text-md opacity-70 font-semibold mb-2">Balance</div>
           <div id="balance" class="text-4xl mb-5">$4,387</div>
@@ -59,46 +59,21 @@
         </div>
         <button
           id="add-card-btn"
-          class="absolute w-10 h-10 bottom-[-20px] left-1/2 transform -translate-x-1/2
-            bg-purple-600 text-white text-4xl text-center rounded-full"
+          class="absolute w-9 h-9 bottom-[-20px] left-1/2 transform -translate-x-1/2 bg-[#D898FF]
+            text-white text-3xl text-center font-semibold rounded-full"
         >
           +
         </button>
       </div>
-      <div class="bg-white w-full max-w-sm mb-6 rounded-b-3xl p-4">
-        <h2 class="text-lg font-semibold my-5">Transactions</h2>
+
+      <!-- Transactions Section -->
+      <div
+        class="bg-white w-full max-w-sm min-h-[410px] -mt-4 mb-6 rounded-b-3xl p-4 pt-14 pb-5 shadow-xl"
+      >
+        <h2 class="text-lg font-semibold mb-5">Transactions</h2>
         <ul id="transaction-list">
           <li class="flex justify-between py-2">
-            <div class="flex items-center">
-              <img
-                class="w-5 h-5"
-                src="https://img.icons8.com/?size=100&id=RVPXcPVHM7r1&format=png&color=000000"
-                alt="plane"
-              />
-              <span class="ml-2">Travel</span>
-            </div>
-            <div class="text-red-500">-$200.00</div>
-          </li>
-          <li class="flex justify-between py-2">
-            <div class="flex items-center">
-              <span class="material-icons text-yellow-500">restaurant</span>
-              <span class="ml-2">Food</span>
-            </div>
-            <div class="text-red-500">-$16.00</div>
-          </li>
-          <li class="flex justify-between py-2">
-            <div class="flex items-center">
-              <span class="material-icons text-green-500">work</span>
-              <span class="ml-2">Work</span>
-            </div>
-            <div class="text-green-500">+$2400.00</div>
-          </li>
-          <li class="flex justify-between py-2">
-            <div class="flex items-center">
-              <span class="material-icons text-red-500">shopping_bag</span>
-              <span class="ml-2">Shopping</span>
-            </div>
-            <div class="text-red-500">-$140.00</div>
+            <!-- Generated with JS -->
           </li>
         </ul>
       </div>
@@ -129,16 +104,22 @@
             type="text"
             id="card-name"
             placeholder="Name on card"
-            class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda] focus:border-[#482dda] transition-colors duration-300"
+            class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda]
+              focus:border-[#482dda] transition-colors duration-300"
           />
           <input
             type="text"
             id="card-number-input"
             placeholder="Card Number"
-            class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda] focus:border-[#482dda] transition-colors duration-300"
+            class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda]
+              focus:border-[#482dda] transition-colors duration-300"
           />
           <div class="flex space-x-4">
-            <select id="expiry-month" class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda] focus:border-[#482dda] transition-colors duration-300">
+            <select
+              id="expiry-month"
+              class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda]
+                focus:border-[#482dda] transition-colors duration-300"
+            >
               <option value="" disabled selected>Month</option>
               <option value="01">01</option>
               <option value="02">02</option>
@@ -153,7 +134,11 @@
               <option value="11">11</option>
               <option value="12">12</option>
             </select>
-            <select id="expiry-year" class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda] focus:border-[#482dda] transition-colors duration-300">
+            <select
+              id="expiry-year"
+              class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda]
+                focus:border-[#482dda] transition-colors duration-300"
+            >
               <option value="" disabled selected>Year</option>
               <!-- Generate years dynamically with JavaScript -->
             </select>
@@ -161,7 +146,8 @@
               type="text"
               id="cvc-code"
               placeholder="CVC Code"
-              class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda] focus:border-[#482dda] transition-colors duration-300"
+              class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda]
+                focus:border-[#482dda] transition-colors duration-300"
             />
           </div>
         </div>
@@ -170,12 +156,14 @@
             <input type="checkbox" id="default-card" />
             <span class="slider"></span>
           </label>
-          <label for="default-card" class="text-md uppercase">Set as default card</label>
+          <label for="default-card" class="text-md uppercase"
+            >Set as default card</label
+          >
         </div>
         <button
           id="add-card-submit"
-          class="w-full mt-72 p-2 bg-gradient-to-r from-purple-400 to-purple-700 text-white shadow-sm rounded-lg font-bold
-            hover:bg-purple-700 transition"
+          class="w-full mt-72 p-2 bg-gradient-to-r from-purple-400 to-purple-700 text-white
+            shadow-sm rounded-lg font-bold hover:bg-purple-700 transition"
         >
           Add New Card
         </button>

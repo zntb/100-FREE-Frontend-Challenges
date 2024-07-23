@@ -4,24 +4,20 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
-.card-bg {
-  background-image: linear-gradient(
-    to left top,
-    #43b9dc,
-    #00a9e6,
-    #0097ee,
-    #0082f2,
-    #0069ed,
-    #465be7,
-    #664bde,
-    #7f35d2,
-    #8b34cf,
-    #9633cd,
-    #a132ca,
-    #aa32c7
-  );
-  transition: background-image 0.5s ease;
+#card-section::before {
+  content: "";
+  position: absolute;
+  top: 42.8%;
+  left: 50%;
+  transform: translateX(-71%);
+  rotate: 45deg;
+  border-width: 80px;
+  border-radius: 32px;
+  border-style: solid;
+  border-color: black;
+  z-index: 0;
 }
+
 .hidden {
   display: none;
 }
@@ -110,14 +106,14 @@ input:checked + .slider:before {
   }
   to {
     transform: translateX(0);
-    opacity: 1;
+    opacity: 0.9;
   }
 }
 
 @keyframes slideOut {
   from {
     transform: translateX(0);
-    opacity: 1;
+    opacity: 0.9;
   }
   to {
     transform: translateY(-10%);
