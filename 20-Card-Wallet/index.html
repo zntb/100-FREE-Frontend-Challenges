@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Our unique tag to identify the solution -->
+    <bds />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BigDevSoon Card Wallet challenge</title>
+
+    <!-- TailwindCSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+
+  <body class="bg-gray-100">
+    <div
+      id="card-section"
+      class="min-h-screen flex flex-col items-center justify-center"
+    >
+      <!-- My Cards Section -->
+      <div
+        class="bg-black w-full max-w-sm rounded-t-3xl shadow-md p-4 relative"
+      >
+        <div class="mb-6">
+          <p class="text-sm text-white mb-4">Welcome</p>
+          <h1 class="text-3xl text-white font-bold">My Cards</h1>
+        </div>
+        <div
+          id="card-container"
+          class="relative card-bg rounded-xl text-white p-4 mb-4"
+        >
+          <div class="text-md opacity-70 font-semibold mb-2">Balance</div>
+          <div id="balance" class="text-4xl mb-5">$4,387</div>
+          <div class="flex flex-col justify-between space-y-10">
+            <div id="card-number" class="text-2xl tracking-widest">
+              **** **** **** 2390
+            </div>
+            <div class="flex flex-col text-sm">
+              <span>Expires</span>
+              <span id="expiry">12/24</span>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-4 text-2xl font-bold">
+            <img
+              class="w-[70px] h-[40px]"
+              src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/visa.png"
+              alt="visa"
+            />
+          </div>
+        </div>
+
+        <div class="flex justify-center mb-6">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button
+          id="add-card-btn"
+          class="absolute w-10 h-10 bottom-[-20px] left-1/2 transform -translate-x-1/2
+            bg-purple-600 text-white text-4xl text-center rounded-full"
+        >
+          +
+        </button>
+      </div>
+      <div class="bg-white w-full max-w-sm mb-6 rounded-b-3xl p-4">
+        <h2 class="text-lg font-semibold my-5">Transactions</h2>
+        <ul id="transaction-list">
+          <li class="flex justify-between py-2">
+            <div class="flex items-center">
+              <img
+                class="w-5 h-5"
+                src="https://img.icons8.com/?size=100&id=RVPXcPVHM7r1&format=png&color=000000"
+                alt="plane"
+              />
+              <span class="ml-2">Travel</span>
+            </div>
+            <div class="text-red-500">-$200.00</div>
+          </li>
+          <li class="flex justify-between py-2">
+            <div class="flex items-center">
+              <span class="material-icons text-yellow-500">restaurant</span>
+              <span class="ml-2">Food</span>
+            </div>
+            <div class="text-red-500">-$16.00</div>
+          </li>
+          <li class="flex justify-between py-2">
+            <div class="flex items-center">
+              <span class="material-icons text-green-500">work</span>
+              <span class="ml-2">Work</span>
+            </div>
+            <div class="text-green-500">+$2400.00</div>
+          </li>
+          <li class="flex justify-between py-2">
+            <div class="flex items-center">
+              <span class="material-icons text-red-500">shopping_bag</span>
+              <span class="ml-2">Shopping</span>
+            </div>
+            <div class="text-red-500">-$140.00</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Add a Card Section -->
+    <div
+      id="add-card-section"
+      class="hidden absolute bg-white max-h-[690px] w-screen items-center justify-center
+        m-auto left-0 right-0 top-0 bottom-0 max-w-sm rounded-3xl shadow-md p-4"
+    >
+      <button
+        id="close-btn"
+        class="absolute top-0 left-1 w-6 h-6 p-1 rounded-full m-4 text-2xl hover:scale-105
+          transition"
+      >
+        <img
+          src="https://img.icons8.com/?size=100&id=7806&format=png&color=000000"
+          alt="left-arrow"
+        />
+      </button>
+      <div class="m-9">
+        <h1 class="text-2xl font-bold">Add a card</h1>
+      </div>
+      <form class="flex flex-col justify-around">
+        <div class="flex flex-col space-y-5 mb-6">
+          <input
+            type="text"
+            id="card-name"
+            placeholder="Name on card"
+            class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda] focus:border-[#482dda] transition-colors duration-300"
+          />
+          <input
+            type="text"
+            id="card-number-input"
+            placeholder="Card Number"
+            class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda] focus:border-[#482dda] transition-colors duration-300"
+          />
+          <div class="flex space-x-4">
+            <select id="expiry-month" class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda] focus:border-[#482dda] transition-colors duration-300">
+              <option value="" disabled selected>Month</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <select id="expiry-year" class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda] focus:border-[#482dda] transition-colors duration-300">
+              <option value="" disabled selected>Year</option>
+              <!-- Generate years dynamically with JavaScript -->
+            </select>
+            <input
+              type="text"
+              id="cvc-code"
+              placeholder="CVC Code"
+              class="w-full p-2 border rounded-md shadow-sm focus:outline-[#482dda] focus:border-[#482dda] transition-colors duration-300"
+            />
+          </div>
+        </div>
+        <div class="flex items-center gap-2 mt-2">
+          <label class="switch">
+            <input type="checkbox" id="default-card" />
+            <span class="slider"></span>
+          </label>
+          <label for="default-card" class="text-md uppercase">Set as default card</label>
+        </div>
+        <button
+          id="add-card-submit"
+          class="w-full mt-72 p-2 bg-gradient-to-r from-purple-400 to-purple-700 text-white shadow-sm rounded-lg font-bold
+            hover:bg-purple-700 transition"
+        >
+          Add New Card
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
