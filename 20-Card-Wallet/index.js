@@ -224,9 +224,8 @@ document.getElementById("add-card-submit").onclick = (e) => {
   e.preventDefault();
 
   const cardName = document.getElementById("card-name").value;
-  const cardNumber = document
-    .getElementById("card-number-input")
-    .value.replace(/\s+/g, "");
+  const cardNumberInput = document.getElementById("card-number-input");
+  const cardNumber = cardNumberInput.value.replace(/\s+/g, "");
   const expiryMonth = document.getElementById("expiry-month").value;
   const expiryYear = document.getElementById("expiry-year").value;
   const cvc = document.getElementById("cvc-code").value;
@@ -234,6 +233,8 @@ document.getElementById("add-card-submit").onclick = (e) => {
 
   if (
     cardName &&
+    cardNumber.length >= 13 &&
+    cardNumber.length <= 19 &&
     validateLuhnAlgorithm(cardNumber) &&
     validateExpirationDate(
       parseInt(expiryMonth, 10),
@@ -263,7 +264,7 @@ document.getElementById("add-card-submit").onclick = (e) => {
     cardSection.classList.remove("hidden");
 
     document.getElementById("card-name").value = "";
-    document.getElementById("card-number-input").value = "";
+    cardNumberInput.value = "";
     document.getElementById("expiry-month").value = "";
     document.getElementById("expiry-year").value = "";
     document.getElementById("cvc-code").value = "";
@@ -297,20 +298,24 @@ function formatCardNumber(cardNumber) {
 }
 
 function validateLuhnAlgorithm(cardNumber) {
-  let sum = 0;
-  let isEven = false;
-
-  for (let i = cardNumber.length - 1; i >= 0; i--) {
-    let digit = parseInt(cardNumber[i], 10);
-
-    if (isEven && (digit *= 2) > 9) {
-      digit -= 9;
-    }
-
-    sum += digit;
-    isEven = !isEven;
+  const number = cardNumber.toString();
+  const digits = number.replace(/\D/g, "").split("").map(Number);
+  if (digits.length < 13 || digits.length > 19) {
+    return false;
   }
-
+  let sum = 0;
+  let isSecond = false;
+  for (let i = digits.length - 1; i >= 0; i--) {
+    let digit = digits[i];
+    if (isSecond) {
+      digit *= 2;
+      if (digit > 9) {
+        digit -= 9;
+      }
+    }
+    sum += digit;
+    isSecond = !isSecond;
+  }
   return sum % 10 === 0;
 }
 
