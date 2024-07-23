@@ -15,7 +15,7 @@ const maxCards = 5;
 const gradients = [
   "linear-gradient(to left top, #43b9dc, #00a9e6, #0097ee, #0082f2, #0069ed, #465be7, #664bde, #7f35d2, #8b34cf, #9633cd, #a132ca, #aa32c7)",
   "linear-gradient(to left top, #abb751, #cb972f, #e56e37, #ee3b5b, #db008d, #c804a4, #ab20bc, #7f35d2, #8b34cf, #9633cd, #a132ca, #aa32c7)",
-  "linear-gradient(to left top, #74e5e0, #00d1ed, #00bafd, #009eff, #007afd, #4767f2, #6751e4, #7f35d2, #8b34cf, #9633cd, #a132ca, #aa32c7)",
+  "linear-gradient(to right bottom, #742ff8, #842cf2, #922aec, #9e29e6, #a828e0, #8058f4, #5074fe, #0089ff, #00abff, #00c5f0, #00d6b3, #2ae169)",
   "linear-gradient(to left top, #77de8d, #00d2b8, #00c0e8, #00a6ff, #0081ff, #456cf5, #6654e6, #7f35d2, #8b34cf, #9633cd, #a132ca, #aa32c7)",
   "linear-gradient(to left top, #de7780, #dd6185, #d74b90, #c838a1, #ae2fb6, #a22fbf, #9231c9, #7f35d2, #8b34cf, #9633cd, #a132ca, #aa32c7)",
 ];
@@ -26,6 +26,48 @@ const cardData = [
     expiry: "04/26",
     brand: "VISA",
     gradient: gradients[0],
+    transactions: [
+      {
+        category: "Travel",
+        date: "3 days ago",
+        amount: "-$200.00",
+        type: "expense",
+        icon: "https://img.icons8.com/?size=100&id=RVPXcPVHM7r1&format=png&color=000000",
+        bg: "[#d6f2fdc4]",
+      },
+      {
+        category: "Food",
+        date: "5 days ago",
+        amount: "-$16.00",
+        type: "expense",
+        icon: "https://img.icons8.com/?size=100&id=erEevcUCwAMR&format=png&color=000000",
+        bg: "[#D6FED5]",
+      },
+      {
+        category: "Work",
+        date: "6 days ago",
+        amount: "+$2400.00",
+        type: "income",
+        icon: "https://img.icons8.com/?size=100&id=NTa3xp2XGiRy&format=png&color=000000",
+        bg: "[#fed5c7e1]",
+      },
+      {
+        category: "Shopping",
+        date: "6 days ago",
+        amount: "-$140.00",
+        type: "expense",
+        icon: "https://img.icons8.com/?size=100&id=M1Hkvurqywmk&format=png&color=000000",
+        bg: "[#f8ffca]",
+      },
+      {
+        category: "Car",
+        date: "7 days ago",
+        amount: "-$110.00",
+        type: "expense",
+        icon: "https://img.icons8.com/?size=100&id=Mve7dPhZwpVZ&format=png&color=000000",
+        bg: "[#dad6fdc4]",
+      },
+    ],
   },
   {
     balance: "$1256",
@@ -33,13 +75,49 @@ const cardData = [
     expiry: "05/25",
     brand: "VISA",
     gradient: gradients[1],
+    transactions: [
+      {
+        category: "Rental",
+        date: "yesterday",
+        amount: "+$600.00",
+        type: "income",
+        icon: "https://img.icons8.com/?size=100&id=fobbWOfj4vLU&format=png&color=000000",
+        bg: "[#f6ffd1]",
+      },
+      {
+        category: "Groceries",
+        date: "3 days ago",
+        amount: "-$200.00",
+        type: "expense",
+        icon: "https://img.icons8.com/?size=100&id=CUByzzUJpaet&format=png&color=000000",
+        bg: "[#D6FED5]",
+      },
+      {
+        category: "Pizza",
+        date: "5 days ago",
+        amount: "-$16.00",
+        type: "expense",
+        icon: "https://img.icons8.com/?size=100&id=Q2fre4pbJjTx&format=png&color=000000",
+        bg: "[#D6FED5]",
+      },
+    ],
   },
   {
     balance: "Ξ10,505",
-    number: "**** **** **** 1567",
-    expiry: "05/25",
+    number: "**** **** **** 1909",
+    expiry: "10/28",
     brand: "VISA",
     gradient: gradients[2],
+    transactions: [
+      {
+        category: "Trade",
+        date: "1 days ago",
+        amount: "+Ξ0.562",
+        type: "income",
+        icon: "https://img.icons8.com/?size=100&id=tL4HcqvaoJn7&format=png&color=000000",
+        bg: "[#d3faff]",
+      },
+    ],
   },
 ];
 
@@ -89,6 +167,46 @@ function updateCardDisplay(index, animate = true) {
       cardData.length === 0 || i >= cardData.length,
     );
   });
+
+  renderTransactions(card.transactions);
+}
+
+function renderTransactions(transactions) {
+  const transactionList = document.getElementById("transaction-list");
+  transactionList.innerHTML = "";
+
+  if (transactions.length === 0) {
+    const noTransactions = `
+    <div class="w-full text-center">
+          <p class="text-xl text-center text-gray-400 capitalize">No transactions</p>
+        </div>
+    `;
+
+    transactionList.innerHTML = noTransactions;
+  }
+
+  transactions.forEach((transaction) => {
+    const transactionItem = document.createElement("li");
+    transactionItem.classList.add("flex", "justify-between", "py-2");
+
+    const transactionContent = `
+      <div class="flex items-center">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-${transaction.bg}">
+          <img class="w-6 h-6" src="${transaction.icon}" alt="${transaction.category}" />
+        </div>
+        <div class="ml-2 text">
+          <p class="font-semibold">${transaction.category}</p>
+          <p class="text-xs opacity-70">${transaction.date}</p>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <div class="bg-${transaction.type === "income" ? "green" : "red"}-100 h-6 px-2 rounded text-${transaction.type === "income" ? "green" : "red"}-500">${transaction.amount}</div>
+      </div>
+    `;
+
+    transactionItem.innerHTML = transactionContent;
+    transactionList.appendChild(transactionItem);
+  });
 }
 
 function updateDotStates() {
@@ -103,7 +221,7 @@ addCardBtn.onclick = () => {
 };
 
 document.getElementById("add-card-submit").onclick = (e) => {
-  e.preventDefault(); // Prevent form submission
+  e.preventDefault();
 
   const cardName = document.getElementById("card-name").value;
   const cardNumber = document
@@ -130,6 +248,7 @@ document.getElementById("add-card-submit").onclick = (e) => {
       expiry: `${expiryMonth}/${expiryYear.slice(-2)}`,
       brand: detectCardType(cardNumber),
       gradient: gradients[cardData.length % gradients.length],
+      transactions: [],
     };
     cardData.push(newCard);
 
@@ -143,7 +262,6 @@ document.getElementById("add-card-submit").onclick = (e) => {
     addCardSection.classList.add("hidden");
     cardSection.classList.remove("hidden");
 
-    // Clear input fields
     document.getElementById("card-name").value = "";
     document.getElementById("card-number-input").value = "";
     document.getElementById("expiry-month").value = "";
@@ -183,53 +301,41 @@ function validateLuhnAlgorithm(cardNumber) {
   let isEven = false;
 
   for (let i = cardNumber.length - 1; i >= 0; i--) {
-    let digit = parseInt(cardNumber.charAt(i), 10);
+    let digit = parseInt(cardNumber[i], 10);
 
-    if (isEven) {
-      digit *= 2;
-      if (digit > 9) {
-        digit -= 9;
-      }
+    if (isEven && (digit *= 2) > 9) {
+      digit -= 9;
     }
+
     sum += digit;
     isEven = !isEven;
   }
-  detectCardType(cardNumber);
+
   return sum % 10 === 0;
 }
 
+function validateExpirationDate(month, year) {
+  const now = new Date();
+  const expirationDate = new Date(year, month - 1);
+  return expirationDate > now;
+}
+
+function validateCVV(cvv) {
+  return /^\d{3,4}$/.test(cvv);
+}
+
 function detectCardType(cardNumber) {
-  const patterns = {
+  const cardTypes = {
     visa: /^4[0-9]{12}(?:[0-9]{3})?$/,
     mastercard: /^5[1-5][0-9]{14}$/,
     amex: /^3[47][0-9]{13}$/,
     discover: /^6(?:011|5[0-9]{2})[0-9]{12}$/,
   };
 
-  for (const cardType in patterns) {
-    if (patterns[cardType].test(cardNumber)) {
-      return cardType.toUpperCase();
+  for (const [brand, pattern] of Object.entries(cardTypes)) {
+    if (pattern.test(cardNumber)) {
+      return brand.toUpperCase();
     }
   }
-
   return "UNKNOWN";
-}
-
-function validateExpirationDate(month, year) {
-  const now = new Date();
-  const currentMonth = now.getMonth() + 1;
-  const currentYear = now.getFullYear();
-
-  if (year < currentYear) {
-    return false;
-  } else if (year === currentYear && month < currentMonth) {
-    return false;
-  }
-
-  return true;
-}
-
-function validateCVV(cvv) {
-  const cvvPattern = /^[0-9]{3,4}$/;
-  return cvvPattern.test(cvv);
 }
