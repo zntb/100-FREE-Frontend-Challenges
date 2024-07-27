@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Our unique tag to identify the solution -->
+    <bds />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>BigDevSoon Pricing Plans challenge</title>
+
+    <!-- TailwindCSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+
+  <body
+    class="bg-cover bg-[url('https://i.ibb.co/ByKcbbb/blurry-gradient-haikei.png')] min-h-screen
+      flex items-center justify-center"
+  >
+    <div class="relative bg-transparent m-8">
+      <div
+        class="absolute w-16 h-16 -top-7 right-12 bg-[#FDE5F9] rounded-full z-10 shadow-sm"
+      ></div>
+      <div
+        class="absolute w-9 h-9 top-48 left-20 bg-[#FEC88D] rounded-full z-10 shadow-sm"
+      ></div>
+      <div
+        class="absolute w-16 h-16 bottom-7 -right-6 bg-[#5343E1] rounded-full z-10 shadow-sm"
+      ></div>
+      <div class="bg-gray-100 rounded-2xl shadow-lg m-2 p-5 md:p-20">
+        <div class="w-full max-w-5xl mx-auto p-6">
+          <h1 class="text-2xl md:text-5xl font-semibold text-center mb-10">
+            Unlock
+            <span class="text-[#5343E1] underline">Your Best-Fit</span> Plan
+            Today
+          </h1>
+          <div class="flex justify-center items-center text-center text-sm md:text-lg  mb-16">
+            <label class="flex items-center">
+              <span id="annual-type" class="mr-2">Billed annually</span>
+              <label class="switch">
+                <input id="billingToggle" type="checkbox" class="checkbox" checked />
+                <div class="slider"></div>
+              </label>
+              <span id="monthly-type" class="ml-2">Billed monthly</span>
+            </label>
+          </div>          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+            <div
+              class="relative pricing-plan bg-white text-black p-6 rounded-2xl shadow-2xl
+                overflow-hidden active"
+            >
+              <div class="flex flex-col flex-1 h-full">
+                <p class="title text-xs text-black font-normal mb-3">
+                  All in one
+                </p>
+                <p
+                  class="absolute text-sm text-black font-semibold tracking-tighter top-7 -right-7 px-8
+                    rotate-45 bg-[#FDC98F]"
+                >
+                  Best value
+                </p>
+                <h2 class="text-xl font-bold mb-4">Professional</h2>
+                <p class="text-2xl font-bold mb-4" id="professionalPrice">
+                  $39.99 >
+                </p>
+                <ul class="-ml-3 mb-6 text-gray-500">
+                  <li class="flex items-center mb-1">All core features</li>
+                  <li class="flex items-center mb-1">Priority support</li>
+                  <li class="flex items-center mb-1">Quarterly reviews</li>
+                  <li class="flex items-center mb-1">Custom branding</li>
+                  <li class="flex items-center mb-1">10GB storage</li>
+                </ul>
+                <button
+                  id="button"
+                  class="w-full bg-[#5343E1] text-white hover:opacity-90 font-bold py-2 rounded mt-auto"
+                >
+                  Try free for 30 days
+                </button>
+              </div>
+            </div>
+            <div
+              class="pricing-plan bg-white text-black p-6 rounded-2xl shadow-2xl"
+            >
+              <div class="flex flex-col flex-1 h-full">
+                <p class="title text-xs text-black font-normal mb-3">Basic</p>
+                <h2 class="text-xl font-bold mb-4">Standard</h2>
+                <p class="text-2xl font-bold mb-4" id="standardPrice">
+                  $29.99<span class="text-sm text-gray-400 font-normal"
+                    >/month</span
+                  >
+                </p>
+                <ul class="-ml-3 mb-6 text-gray-500">
+                  <li class="flex items-center mb-1">Most core features</li>
+                  <li class="flex items-center mb-1">Email support</li>
+                  <li class="flex items-center mb-1">Annual reviews</li>
+                  <li class="flex items-center mb-1">Limited branding</li>
+                  <li class="flex items-center mb-1">5GB storage</li>
+                </ul>
+                <button
+                  class="w-full bg-[#FEC88D] text-black hover:opacity-90 font-bold py-2 rounded mt-auto"
+                >
+                  Try free for 30 days
+                </button>
+              </div>
+            </div>
+            <div
+              class="pricing-plan bg-white text-black p-6 rounded-2xl shadow-2xl"
+            >
+              <div class="flex flex-col flex-1 h-full">
+                <p class="title text-xs text-black font-normal mb-3">
+                  Better results
+                </p>
+                <h2 class="text-xl font-bold mb-4">Ultimate</h2>
+                <p class="text-2xl font-bold mb-4" id="ultimatePrice">
+                  $49.99<span class="text-sm text-gray-400 font-normal"
+                    >/month</span
+                  >
+                </p>
+                <ul class="-ml-3 tracking-tighter mb-6 text-gray-500">
+                  <li class="flex items-center mb-1">
+                    All features, including premium
+                  </li>
+                  <li class="flex items-center mb-1">24/7 priority support</li>
+                  <li class="flex items-center mb-1">
+                    Dedicated account manager
+                  </li>
+                  <li class="flex items-center mb-1">
+                    Fully customizable branding
+                  </li>
+                  <li class="flex items-center mb-1">Unlimited storage</li>
+                </ul>
+                <button
+                  class="w-full bg-[#5343E1] text-white hover:opacity-90 font-bold py-2 rounded mt-auto"
+                >
+                  Try free for 30 days
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
