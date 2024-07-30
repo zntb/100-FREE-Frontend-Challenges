@@ -1,0 +1,19 @@
+body {
+  background-color: #ffdcc8;
+}
+.active-conversation {
+  background-color: #f3f4f6;
+}
+
+.hidden-chat {
+  display: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
