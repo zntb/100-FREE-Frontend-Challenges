@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "express": "^4.21.2",
-    "prettier-plugin-classnames": "^0.8.0",
+    "prettier-plugin-classnames": "^0.8.1",
     "supertest": "^7.1.1"
   }
 }
